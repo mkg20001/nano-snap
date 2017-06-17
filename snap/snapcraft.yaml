@@ -1,0 +1,21 @@
+name: nano
+version: 2.5.3
+summary: Single-line elevator pitch for your amazing snap # 79 char long summary
+description: |
+  This is my-snap's description. You have a paragraph or two to tell the
+  most important story about your snap. Keep it under 100 words though,
+  we live in tweetspace and your description wants to look good in the snap
+  store.
+
+apps:
+  nano:
+    command: bin/nano -I
+
+grade: stable
+confinement: devmode # we NEED devmode in order to r/w files outside home
+
+parts:
+  nano:
+    plugin: nil
+    stage-packages:
+      - nano
